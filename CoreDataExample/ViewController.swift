@@ -42,6 +42,27 @@ class ViewController: UIViewController {
     //MARK:- Add Actions
 
     @IBAction func buttonAddPressed(_ sender: UIButton) {
+        print("Add button pressed")
+        
+        //1. Get data from textbox
+        let x = nameTextField.text
+        
+        //2. Create a person object
+        var p = Person(context: self.context)
+        
+        //3. Set the properties of the person object
+        p.age = 40
+        p.name = x
+        
+        //4. Save the person object to the database
+        do{
+            try self.context.save()
+            print("Saved the person to the database")
+        } catch {
+            print("Error when saving to the database")
+        }
+        
+        //5. Done
     }
     
     @IBOutlet weak var buttonLoadPressed: UIButton!
