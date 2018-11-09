@@ -65,6 +65,29 @@ class ViewController: UIViewController {
         //5. Done
     }
     
-    @IBOutlet weak var buttonLoadPressed: UIButton!
+    @IBAction func buttonLoadPressed(_ sender: UIButton) {
+        
+        // This is the same as:  SELECT * FROM User
+        let fetchRequest:NSFetchRequest<Person> = Person.fetchRequest()
+        
+        do {
+            // Send the "SELECT *" to the database
+            //  results = variable that stores any "rows" that come back from the db
+            // Note: The database will send back an array of User objects
+            // (this is why I explicilty cast results as [User]
+            let results = try self.context.fetch(fetchRequest) as [Person]
+            
+            // Loop through the database results and output each "row" to the screen
+            print("Number of items in database: \(results.count)")
+            
+            for x in results {
+                print("User Email: \(String(describing: x.name))")
+                print("User Password: \(x.age)")
+            }
+        }
+        catch let error {
+            print("Error when fetching from database\(error.localizedDescription)")
+        }
+    }
 }
 

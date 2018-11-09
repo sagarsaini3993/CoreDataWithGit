@@ -32,6 +32,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Load Data"/>
+                                <connections>
+                                    <action selector="buttonLoadPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="prf-dU-0iB"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NTe-Eq-ErQ">
                                 <rect key="frame" x="67" y="122" width="233" height="30"/>
@@ -52,7 +55,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="buttonLoadPressed" destination="sZh-tc-Kfy" id="yIp-0K-6m7"/>
                         <outlet property="nameTextField" destination="NTe-Eq-ErQ" id="kSO-3p-7T1"/>
                     </connections>
                 </viewController>
