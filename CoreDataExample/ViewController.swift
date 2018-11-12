@@ -100,15 +100,32 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let VC2 = segue.destination as! SearchResultViewController
-        VC2.searchData = searchTextField.text!
+//        let VC2 = segue.destination as! SearchResultViewController
+//        VC2.searchData = searchTextField.text!
         
  
-//        let VC2 = segue.destination as! EditUserViewController
+        let VC2 = segue.destination as! EditUserViewController
         
-//        VC2.person =
-
+        let fetchRequest:NSFetchRequest<Person> = Person.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "sagarsaini3993@gmail.com")
         
+        do {
+            // Send the "SELECT *" to the database
+            //  results = variable that stores any "rows" that come back from the db
+            // Note: The database will send back an array of User objects
+            // (this is why I explicilty cast results as [User]
+            let results = try self.context.fetch(fetchRequest) as [Person]
+            
+            // Loop through the database results and output each "row" to the screen
+            print("Number of items in database: \(results.count)")
+            
+            if results.count == 1 {
+                VC2.person = results[0] as Person
+            }
+        }
+        catch {
+            print("Error When fetching data")
+        }
     }
 }
 
