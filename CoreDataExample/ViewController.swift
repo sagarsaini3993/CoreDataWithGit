@@ -11,8 +11,12 @@ import CoreData
 
 class ViewController: UIViewController {
     
+    
+    var searchData :String = ""
+    
     //MARK: Outlets
     
+    @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var nameTextField: UITextField!
     // MARK: CoreDta variables
     // ------------------------------
@@ -68,7 +72,12 @@ class ViewController: UIViewController {
     @IBAction func buttonLoadPressed(_ sender: UIButton) {
         
         // This is the same as:  SELECT * FROM User
+        
+        // Select * from user
         let fetchRequest:NSFetchRequest<Person> = Person.fetchRequest()
+        
+        // WHERE email = "sagarsaini3993@gmail.com"
+        fetchRequest.predicate = NSPredicate(format: "name == %@", "sagarsaini3993@gmail.com")
         
         do {
             // Send the "SELECT *" to the database
@@ -88,6 +97,18 @@ class ViewController: UIViewController {
         catch let error {
             print("Error when fetching from database\(error.localizedDescription)")
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let VC2 = segue.destination as! SearchResultViewController
+        VC2.searchData = searchTextField.text!
+        
+ 
+//        let VC2 = segue.destination as! EditUserViewController
+        
+//        VC2.person =
+
+        
     }
 }
 

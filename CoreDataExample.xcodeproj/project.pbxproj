@@ -13,6 +13,8 @@
 		9B7EF7452195C1BC00A0A2CC /* CoreDataExample.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9B7EF7432195C1BC00A0A2CC /* CoreDataExample.xcdatamodeld */; };
 		9B7EF7472195C1C000A0A2CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B7EF7462195C1C000A0A2CC /* Assets.xcassets */; };
 		9B7EF74A2195C1C000A0A2CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B7EF7482195C1C000A0A2CC /* LaunchScreen.storyboard */; };
+		9B854C372199CDE6001F01F5 /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B854C362199CDE6001F01F5 /* SearchResultViewController.swift */; };
+		9B854C392199D65C001F01F5 /* EditUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B854C382199D65C001F01F5 /* EditUserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9B7EF7462195C1C000A0A2CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9B7EF7492195C1C000A0A2CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9B7EF74B2195C1C000A0A2CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B854C362199CDE6001F01F5 /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		9B854C382199D65C001F01F5 /* EditUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditUserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,8 @@
 				9B7EF73C2195C1BC00A0A2CC /* AppDelegate.swift */,
 				9B7EF73E2195C1BC00A0A2CC /* ViewController.swift */,
 				9B7EF7402195C1BC00A0A2CC /* Main.storyboard */,
+				9B854C382199D65C001F01F5 /* EditUserViewController.swift */,
+				9B854C362199CDE6001F01F5 /* SearchResultViewController.swift */,
 				9B7EF7462195C1C000A0A2CC /* Assets.xcassets */,
 				9B7EF7482195C1C000A0A2CC /* LaunchScreen.storyboard */,
 				9B7EF74B2195C1C000A0A2CC /* Info.plist */,
@@ -140,6 +146,8 @@
 			files = (
 				9B7EF73F2195C1BC00A0A2CC /* ViewController.swift in Sources */,
 				9B7EF73D2195C1BC00A0A2CC /* AppDelegate.swift in Sources */,
+				9B854C372199CDE6001F01F5 /* SearchResultViewController.swift in Sources */,
+				9B854C392199D65C001F01F5 /* EditUserViewController.swift in Sources */,
 				9B7EF7452195C1BC00A0A2CC /* CoreDataExample.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
